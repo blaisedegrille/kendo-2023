@@ -1,3 +1,7 @@
+# Config
+
+Angular CLI: 16.2.3 Node: 18.17.1 Package Manager: npm 10.1.0 OS: linux x64 Angular: 16.2.6
+
 # Kendo2023
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
