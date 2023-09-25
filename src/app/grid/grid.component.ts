@@ -10,7 +10,7 @@ import { ParentComponent } from './parent.component';
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss'],
 })
-export class GridComponent extends ParentComponent {
+export class GridComponent {
   @Input()
   public gridItems: Observable<GridDataResult> | undefined;
   @Input()
@@ -21,19 +21,13 @@ export class GridComponent extends ParentComponent {
   public sortDescriptor: SortDescriptor[] = [];
   @Input()
   public filterTerm!: number;
-  @Input()
-  set apiService(val: any) {
-    super.service = val;
-    inject(super.service);
-  }
 
-  constructor() {
-    super();
+  constructor(private readonly productService: ProductService) {
     this.loadGridItems();
   }
 
   private loadGridItems(): void {
-    this.gridItems = this.service.getProducts(
+    this.gridItems = this.productService.getProducts(
       this.skip,
       this.pageSize,
       this.sortDescriptor,

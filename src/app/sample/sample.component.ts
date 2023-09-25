@@ -11,7 +11,7 @@ import { ProductService } from '../data/product.service';
   styleUrls: ['./sample.component.scss'],
 })
 export class SampleComponent {
-  @ViewChild(GridComponent) child: GridComponent = new GridComponent();
+  // @ViewChild(GridComponent) child: GridComponent = new GridComponent();
 
   public gridItems: Observable<GridDataResult> | undefined;
   public pageSize: number = 10;
