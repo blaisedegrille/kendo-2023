@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductService } from './data/product.service';
 import { TableModule } from './grid/table.module';
 import { GridComponent } from './grid/grid.component';
+import { NotificationModule } from '@progress/kendo-angular-notification';
+
 
 @NgModule({
   declarations: [AppComponent, SampleComponent, GridComponent],
@@ -18,6 +20,7 @@ import { GridComponent } from './grid/grid.component';
     GridModule,
     TableModule,
     BrowserAnimationsModule,
+    NotificationModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],
